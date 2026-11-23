@@ -37,7 +37,7 @@ Then just say: `use motion-vocab to tear down https://example.com and compile a 
 motion-vocab/
 ├── SKILL.md                  entry point: five routes, hard specs, verification, byline rules
 ├── README.md / README.en.md  front pages (zh / en)
-├── LICENSE                   MIT
+├── LICENSE                   PolyForm-Noncommercial-1.0.0
 ├── CHANGELOG.md              change log
 ├── references/               six reference docs
 │   ├── teardown.md           six-column teardown (source+license / layers / modules / motion / style / transferable)
@@ -84,7 +84,7 @@ python scripts/run_all.py "booklets/03-版式与组件词汇册.html" --section 
 
 Only booklets **03** and **12** ship here; the other 14 stay local with the author. Numbers 1–16 are the author's own booklet numbers — if a number isn't in this repo, treat it as missing, don't guess.
 
-[MIT](LICENSE) — use it, change it, ship it commercially; just keep the copyright notice.
+[PolyForm Noncommercial 1.0.0](LICENSE) — download it, read it, change it, redistribute it for personal study, teaching, portfolios, and non-profit or research use. **Commercial use is not permitted**: paid courses, paid tools, client deliverables, internal production use at a company, or bundling into a commercial product all require a separate commercial license. Distributions must carry the full license text (or the URL above) and the `Required Notice` copyright line. Commercial licensing available on request.
 
 ## Author
 

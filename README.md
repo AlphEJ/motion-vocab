@@ -8,7 +8,7 @@
 
 **形容词没有落点，名词自带参数。** 这个 Skill 做的，就是把那些你叫不出名字的效果，拆成有名字、有参数、有边界的词，再立成一册能照着抄的词汇册。
 
-> PolyForm Noncommercial 1.0.0 许可 · 可以下载、可以改、可以自用与教学 · **不可商用**
+> MIT 许可 · 可自由使用、修改与商用 · 唯一要求是保留版权声明
 
 ## 30 秒装上
 
@@ -61,7 +61,7 @@ mkdir -p ~/.codex/skills && cp -r motion-vocab ~/.codex/skills/motion-vocab
 motion-vocab/
 ├── SKILL.md                  主入口：五个入口、硬规格、验收口径、署名规则
 ├── README.md / README.en.md  门面（中 / 英）
-├── LICENSE                   PolyForm-Noncommercial-1.0.0
+├── LICENSE                   MIT
 ├── CHANGELOG.md              变更记录
 ├── references/               六份参考文档
 │   ├── teardown.md           六栏拆解（来源与许可 / 骨架分层 / 模块 / 动效 / 风格 / 可搬元素）
@@ -121,15 +121,18 @@ python scripts/run_all.py "booklets/03-版式与组件词汇册.html" --section 
 
 ## 许可
 
-[PolyForm Noncommercial 1.0.0](LICENSE)（下称"本许可"）。
+[MIT](LICENSE)，Copyright (c) 2026 Alpha_领域。
 
-- **可以**：下载、阅读、修改、二次分发，用于个人学习、作品展示、教学引用、非营利机构与研究机构；改过的版本也可以再分发。
-- **不可以**：任何商业用途——包括拿它做付费课程/付费工具、给客户交付、公司内部生产使用、打包进商业产品。
-- **要求**：分发时随附本许可全文（或上面的官方链接），保留 `Required Notice` 那一行版权声明。
-- **商用授权**：单独找我谈，不是一律不给。
-- 联系方式：抖音 / 小红书 / 微信公众号 **@Alpha_领域**。
-- **覆盖范围**：本许可覆盖仓库内全部内容——`SKILL.md`、`references/`、`booklets/`、`scripts/`、`assets/`。
+- **可以**：下载、阅读、修改、二次分发，**包括商用**——做课程、做付费工具、给客户交付、打包进商业产品，都不用另外问我。
+- **唯一要求**：任何副本或实质性部分里，必须保留 `LICENSE` 里的版权声明与许可声明（MIT 原文那句 *The above copyright notice and this permission notice shall be included in all copies*）。一句话：**用可以，别把作者抹掉。**
+- **覆盖范围**：`SKILL.md`、`references/`、`booklets/`、`scripts/`、`assets/` 全部。
 - **例外**：`screenshots/` 等目录里若含第三方图片、字体或素材，其版权属原作者，不在本许可范围内，再分发前请自行核清来源。
+
+## 出处
+
+本项目由 **@Alpha_领域** 创建，首次提交于 2026-11-23，仓库 [AlphEJ/motion-vocab](https://github.com/AlphEJ/motion-vocab)。
+
+引用、转载或基于它二次开发时，请保留仓库链接与作者署名，格式见 [`CITATION.cff`](CITATION.cff)。改过的版本可以自由再分发，但请注明"**基于 motion-vocab 修改**"。
 
 ## 作者
 

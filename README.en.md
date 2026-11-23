@@ -31,9 +31,47 @@ Then just say: `use motion-vocab to tear down https://example.com and compile a 
 - **C design** — one request → a page with motion chosen from the vocabulary
 - **lookup** — "what's this effect called" → name + parameters + counter-example
 
-## What's inside
+## Repository layout
 
-`SKILL.md`, `references/` (teardown, booklet, words, intent, survey, sources), `scripts/` (struct, JS, style, overflow, privacy, run_all), `assets/` (2 bundled samples), `booklets/` (2 finished booklets), `docs/INSTALL.md`.
+```text
+motion-vocab/
+├── SKILL.md                  entry point: five routes, hard specs, verification, byline rules
+├── README.md / README.en.md  front pages (zh / en)
+├── LICENSE                   MIT
+├── CHANGELOG.md              change log
+├── references/               six reference docs
+│   ├── teardown.md           six-column teardown (source+license / layers / modules / motion / style / transferable)
+│   ├── booklet.md            ten-section booklet skeleton and visual recipe
+│   ├── words.md              vocabulary, dedupe, parameter anchors, numbering
+│   ├── intent.md             which route to take for a request
+│   ├── survey.md             domain survey: seven sections, four thresholds
+│   └── sources.md            21 sources with licenses
+├── scripts/                  six checks + deny-word sample
+│   ├── run_all.py            runs all five (--section / --deny-file / --target-dir)
+│   ├── check_struct.py       section count and structure
+│   ├── check_js.py           JS syntax (node --check)
+│   ├── check_style.py        radius / type scale / emoji discipline
+│   ├── check_overflow.py     390px overflow (needs playwright)
+│   ├── check_privacy.py      email / phone / absolute paths / byline / deny words
+│   └── deny-sample.txt       sanitised deny-word sample
+├── assets/                   bundled with the skill
+│   ├── 样例-03-版式与组件词汇册.html    starter skeleton (3 sections)
+│   ├── 样例-12-路径与轨道词汇册.html    full ten-section spec
+│   ├── logo.svg / logo-dark.svg        wordmark (light / dark)
+│   ├── logo-cartoon.svg                rounded cartoon mark
+│   └── favicon.svg                     100×100 square
+├── booklets/                 finished booklets shipped here
+│   ├── 03-版式与组件词汇册.html
+│   ├── 12-路径与轨道词汇册.html
+│   └── 索引.md               index of two + note on the other 14
+├── docs/
+│   └── INSTALL.md            install / verify / troubleshooting
+└── screenshots/
+    ├── header.jpg            README header image
+    └── booklet-12.jpg        booklet 12 first screen
+```
+
+**Where to start**: to use it → “Install (30 seconds)” then `docs/INSTALL.md`; to modify the skill → `SKILL.md`, then the matching file in `references/`; to verify output → `scripts/run_all.py`; to see what a finished booklet looks like → `booklets/`.
 
 ## Verify
 

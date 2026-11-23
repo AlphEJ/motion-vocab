@@ -55,16 +55,47 @@ mkdir -p ~/.codex/skills && cp -r motion-vocab ~/.codex/skills/motion-vocab
 | **C 设计** | 一句需求（做个简历站 / 落地页 / 看板） | 按词库给出动效方案，产出能跑的页面 |
 | **查词** | “这个效果叫什么” | 词名 + 参数锚点 + 用错的例子 |
 
-## 仓库里有什么
+## 仓库结构
 
-| 位置 | 内容 |
-|---|---|
-| `SKILL.md` | 主入口：五个入口怎么走、硬规格、验收口径、署名规则 |
-| `references/` | `teardown`（六栏）· `booklet`（十节骨架与视觉配方）· `words`（查重与参数锚点）· `intent`（需求判读）· `survey`（横评七段）· `sources`（21 条来源与许可） |
-| `scripts/` | 六个校验：结构、JS 语法、样式纪律、窄屏溢出、隐私扫描、一键跑全 |
-| `assets/` | 两册**随包分发**的样例（03 起步骨架 / 12 拆解全规格） |
-| `booklets/` | 仓库附带的 2 册成品 |
-| `docs/INSTALL.md` | 安装、验收、排错 |
+```text
+motion-vocab/
+├── SKILL.md                  主入口：五个入口、硬规格、验收口径、署名规则
+├── README.md / README.en.md  门面（中 / 英）
+├── LICENSE                   MIT
+├── CHANGELOG.md              变更记录
+├── references/               六份参考文档
+│   ├── teardown.md           六栏拆解（来源与许可 / 骨架分层 / 模块 / 动效 / 风格 / 可搬元素）
+│   ├── booklet.md            十节册骨架与视觉配方
+│   ├── words.md              词表、查重、参数锚点、编号规则
+│   ├── intent.md             需求判读：什么时候走哪条入口
+│   ├── survey.md             领域横评七段与四条门槛
+│   └── sources.md            21 条来源与许可索引
+├── scripts/                  六个校验 + 禁词示例
+│   ├── run_all.py            一键跑五项（--section / --deny-file / --target-dir）
+│   ├── check_struct.py       节数与结构
+│   ├── check_js.py           JS 语法（node --check）
+│   ├── check_style.py        圆角 / 字号 / emoji 纪律
+│   ├── check_overflow.py     390 宽是否溢出（需 playwright）
+│   ├── check_privacy.py      邮箱 / 手机号 / 绝对路径 / 署名 / 禁词
+│   └── deny-sample.txt       脱敏的禁词表示例
+├── assets/                   随包分发
+│   ├── 样例-03-版式与组件词汇册.html    起步骨架（3 节）
+│   ├── 样例-12-路径与轨道词汇册.html    十节全规格
+│   ├── logo.svg / logo-dark.svg        横版标志（浅底 / 暗底）
+│   ├── logo-cartoon.svg                圆头卡通版
+│   └── favicon.svg                     100×100 方版
+├── booklets/                 仓库附带的成品
+│   ├── 03-版式与组件词汇册.html
+│   ├── 12-路径与轨道词汇册.html
+│   └── 索引.md               两册册目 + 其余 14 册的声明
+├── docs/
+│   └── INSTALL.md            安装 / 验收 / 排错
+└── screenshots/
+    ├── header.jpg            README 头图
+    └── booklet-12.jpg        第 12 册首屏实景
+```
+
+**读仓库的顺序**：想先用起来 → `README` 的“30 秒装上” → `docs/INSTALL.md`；想改 Skill → `SKILL.md` 建个整体印象，再按任务查 `references/`；想核验收 → `scripts/run_all.py`；想看成品长什么样 → `booklets/`。
 
 ## 验收
 
